@@ -20,8 +20,8 @@ public class UsersTest {
 	@BeforeClass
 	public void beforeClass() {
 		api = new UsersApi(CriblClientHelper.initialize(true));
-		user = new User();
 		data = new Data();
+		user = data.getRandomUser();
 	}
 
 	/**
@@ -33,13 +33,6 @@ public class UsersTest {
 	 */
 	@Test
 	public void systemUsersPostTest() throws ApiException {
-		user.setDisabled(false);
-		user.setEmail(data.internet().emailAddress());
-		user.setFirst(data.name().firstName());
-		user.setLast(data.name().lastName());
-		user.setId(data.internet().uuid());
-		user.setUsername(data.name().username());
-		user.setPassword(data.internet().password());
 		InlineResponse20011 response = api.systemUsersPost(user);
 
 		Assert.assertEquals(response.getItems().get(0).getId(), user.getId());

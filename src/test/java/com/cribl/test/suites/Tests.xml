@@ -8,6 +8,7 @@
     <test name="Tests">
     <packages>	
     	<package name="com.cribl.test.api.*"></package>
+    	<package name="com.cribl.test.web.*"></package>
     </packages>
      </test> <!-- Test -->
 </suite> <!-- Suite -->

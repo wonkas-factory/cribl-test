@@ -16,7 +16,7 @@ public class CriblClientHelper {
 	public static ApiClient initialize(Boolean getToken) {
 		Logging.logToTestNgReporter();
 		criblClient = new ApiClient();
-		criblClient.setBasePath(data.getEnvProp("baseHost"));
+		criblClient.setBasePath(data.getEnvProp("host")+data.getEnvProp("apiPath"));
 		criblClient.setConnectTimeout(TIMEOUT);
 		criblClient.setReadTimeout(TIMEOUT);
 		criblClient.setWriteTimeout(TIMEOUT);

@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.cribl.openapi.dto.User;
 import com.esotericsoftware.yamlbeans.YamlReader;
 import com.github.javafaker.Faker;
 
@@ -14,6 +15,18 @@ public class Data extends Faker {
 	public Data() {
 		super();
 		loadEnvironment();
+	}
+	
+	public User getRandomUser() {
+		User user = new User();
+		user.setDisabled(false);
+		user.setEmail(this.internet().emailAddress());
+		user.setFirst(this.name().firstName());
+		user.setLast(this.name().lastName());
+		user.setId(this.internet().uuid());
+		user.setUsername(this.name().username());
+		user.setPassword(this.internet().password());
+		return user;
 	}
 
 	public String getEnvProp(String key) {

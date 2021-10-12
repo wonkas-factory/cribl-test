@@ -1,3 +1,5 @@
-baseHost: http://b6bd6069803b25b7da7267bf3c706202.course.sandbox.cribl.io:9000/api/v1
+host: https://port-9000-b6ce365f.sandbox.cribl.io
+apiPath: /api/v1
 un: admin
 pw: cribldemo
+browser: Chrome
