@@ -8,4 +8,4 @@ Demonstrates testing Cribl APIs and Web using the available sandbox.
 3. Update the environment file located at config/environment.yml with the host. Note the port in the path the tutorial seems to be 3000 vs 9000 for just the Cribl application. The un and pw should be the same unless you have a non sandbox account
 4. Make sure Chromedriver is included in your path for the web test. For macOS ```brew install chromedriver``` or download from [Chromedriver site](https://chromedriver.chromium.org/home) and set the path or system property "webdriver.chrome.driver" to location of Chromedriver.
 5. Run the sample tests by ```mvn clean test```
-6. HTML report is located in the the following directory ```./test-output/html/index.html```
+6. HTML report is located in the the following directory ```./target/surefire-reports/html/index.html```
